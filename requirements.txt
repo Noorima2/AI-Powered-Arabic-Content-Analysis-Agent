@@ -164,6 +164,7 @@ prometheus_client==0.20.0
 prompt_toolkit==3.0.47
 proto-plus==1.25.0
 protobuf
+PyMuPDF  
 providers==0.0.2
 psutil==6.0.0
 psycopg2-binary==2.9.9

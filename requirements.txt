@@ -1,4 +1,4 @@
-PyMuPDF==1.21.2
+PyMuPDF
 Pillow
 protobuf
 python-dotenv==1.1.0

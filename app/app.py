@@ -26,17 +26,17 @@ gen_ai.configure(api_key=GOOGLE_API_KEY)
 model = gen_ai.GenerativeModel('gemini-2.0-flash')
 
 def extract_text_from_pdf(uploaded_pdf):
-    # فتح الملف PDF
+    # Open the PDF file
     doc = fitz.open(stream=uploaded_pdf, filetype="pdf")
     
     text = ""
-    # استخراج النص من جميع الصفحات
+    # Extract text from all pages 
     for page in doc:
         text += page.get_text()
 
     return text
 
-# Initialize text-to-speech engine
+# Initialize text to speech engine
 engine = pyttsx3.init()
 
 # Function to handle the text-to-speech process in a separate thread
@@ -177,8 +177,8 @@ for message in st.session_state.chat_session.history[1:]:
                 f'</div>', unsafe_allow_html=True)
 st.markdown('</div>', unsafe_allow_html=True)
 
-# File uploader for images
-uploaded_file = st.file_uploader("Upload an image for analysis", type=["jpg", "png", "jpeg", "pdf"])
+# File uploader for images and PDFs
+uploaded_file = st.file_uploader("Upload an image /file for analysis", type=["jpg", "png", "jpeg", "pdf"])
 if uploaded_file:
     # Check if the uploaded file is a PDF
     if uploaded_file.type == "application/pdf":

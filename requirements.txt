@@ -1,7 +1,12 @@
-fitz==0.0.1.dev2
-Pillow==11.2.1
-protobuf==6.30.2
+easyocr==1.7.2
+faiss_cpu==1.10.0
+PyMuPDF
+Pillow
+protobuf
 python-dotenv==1.1.0
 pyttsx3==2.98
+sentence_transformers==4.0.2
 speechrecognition==3.14.2
 streamlit==1.38.0
+googlgetrans
+google.generativeai 
